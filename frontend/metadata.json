@@ -1,0 +1,6 @@
+{
+  "name": "InsightHire",
+  "description": "AI-Powered Hiring Assistant to intelligently rank job candidates by understanding job descriptions and candidate resumes using AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

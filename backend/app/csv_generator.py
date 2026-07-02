@@ -25,10 +25,6 @@ def generate_csv(candidates):
                 candidate["rank"],
                 candidate["score"],
                 candidate["reasoning"]
-<<<<<<< HEAD
-            ])git rev-parse --show-toplevel
-=======
             ])
->>>>>>> bea0a35069159af052977b799583cff55d2619bc
 
     return file_path

@@ -8,9 +8,21 @@ from app.embeddings import get_embedding
 from app.ranking import get_similarity
 from app.csv_generator import generate_csv
 from fastapi.responses import FileResponse
-
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Create folders automatically
 os.makedirs("uploads/jobs", exist_ok=True)
 os.makedirs("uploads/resumes", exist_ok=True)
